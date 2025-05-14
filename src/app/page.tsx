@@ -1,54 +1,90 @@
-"use client"
+"use client";
 
-import Image from "next/image";
 import Hero from "./Components/Sections/HeroComponent";
 import Navbar from "./Components/Sections/NavbarComponent";
-import Projects from "./Components/Sections/PojectsComponents";
-import TextReveal from "./Components/Animation/TypingEffectComponent";
-import { motion } from "framer-motion";
-import TitleComponent from "./Components/UI/TitleComponent";
-import AnimatedBackground from "./Components/Animation/AnimatedBackgroundHero";
 import AboutComponent from "./Components/Sections/AboutComponent";
+import Projects, {
+  ProjectProps,
+} from "./Components/Sections/PojectsComponents";
+import staticProjectData from "./data/staticWebsites.json";
+import apiProjectsData from "./data/apiProjects.json"
+import technicalProjects from "./data/technicalProjects.json"
 
 export default function Home() {
+  const staticProjectsArr: ProjectProps[] = staticProjectData as ProjectProps[];
+  const apiProjectArr: ProjectProps[] = apiProjectsData as ProjectProps[];
+  const technicalProjectsArr: ProjectProps[] = technicalProjects as ProjectProps[];
+
   return (
     <div>
+      
       <Navbar />
       <Hero />
 
       <section>
-      <AboutComponent 
-        title={"About Me"} 
-        image={"/assets/me.png"} 
-        imageAlt={"Andrew"}
-        description={"Hello, my name is Andrew Sayasing. I am a Full Stack  Junior Web Developer who studied and graduated from CodeStack Acedemy  located in Stockton, California."} 
+        <AboutComponent
+          title={"About Me"}
+          image={"/assets/me.png"}
+          imageAlt={"Andrew"}
+          description={
+            "Hello, my name is Andrew Sayasing. I am a Full Stack Junior Web Developer who studied and graduated from CodeStack Acedemy located in Stockton, California."
+          }
         />
-      </section>      
-      
-      {/* <h1 className="text-3xl font-semibold ps-5">Projects</h1>
-      <section className="bg-stone-500/20 mt-10 flex flex-col-3 space-x-3 justify-around h-[400px]">
-          <div className="">
-          Projects
+      </section>
+
+      {/* Projects */}
+      <h1 className="text-3xl pb-10">Projects</h1>
+      <section className="bg-gray-100">
+
+        {/* Static */}
+        <h1>Static Webpages</h1>
+        <div className="grid grid-cols-3">
+          {staticProjectsArr.map((project, index) => (
+            <Projects
+              key={index}
+              title={project.title}
+              projectImg={project.projectImg}
+              projectImgAlt={project.projectImgAlt}
+              projectVercel={project.projectVercel}
+              projectDescription={project.projectDescription}
+              stack={project.stack}
+            />
+          ))}
         </div>
-        <div>
-          Technical Project
+
+          {/* Api */}
+        <h1>API Applications</h1>          
+        <div className="grid grid-cols-3">
+          {apiProjectArr.map((project, index) => (
+            <Projects
+              key={index}
+              title={project.title}
+              projectImg={project.projectImg}
+              projectImgAlt={project.projectImgAlt}
+              projectVercel={project.projectVercel}
+              projectDescription={project.projectDescription}
+              stack={project.stack}
+            />
+          ))}
         </div>
-        <div>
-          Static WebPages
+
+          {/* Technical */}
+        <h1>Technical Applications</h1>
+        <div className="grid grid-cols-3">
+          {technicalProjectsArr.map((project, index) => (
+            <Projects
+              key={index}
+              title={project.title}
+              projectImg={project.projectImg}
+              projectImgAlt={project.projectImgAlt}
+              projectVercel={project.projectVercel}
+              projectDescription={project.projectDescription}
+              stack={project.stack}
+            />
+          ))}
         </div>
-      </section> */}
+      </section>
 
-      <Projects title={"Weather App"} projectImg={"/assets/weatherTracker.png"} projectVercel={""} projectImgAlt={"Weather TrackerApp"} projectDescription={"This is a weather tracker app that has the user input a city or location from the Open Weather API and gives back data on the locations weather"} />
-
-    {/* 3 Sections 
-      Map through the different projects
-
-      Full stack + Poke Api
-
-      Technical - Calculator, Goals list, Some other
-
-      Static Site - Business Redesign, Hamster hotel, Cookware
-    */}
       {/* Contact  */}
       <section id="contact" className="py-5 container mx-auto px-6 ">
         <h2 className="text-3xl font-bold mb-4">Contact</h2>
@@ -56,9 +92,7 @@ export default function Home() {
         <a href="mailto:your.email@example.com" className="">
           Email: sayasing00@gmail.com
         </a>
-        <a href="">
-          Githib: xser56
-        </a>
+        <a href="">Githib: xser56</a>
       </section>
     </div>
   );

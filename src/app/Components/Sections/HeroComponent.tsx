@@ -7,7 +7,7 @@ export default function Hero() {
     <main className="h-screen flex flex-col justify-center  bg-gray-100">
       
       <AnimatedBackground/>
-      <div className="relative left-30">
+      <div className="absolute left-30">
         <h1 className="text-[30px] font-bold mb-1 text-stone-900 ">Welcome. </h1>
 
       <h1 className="text-4xl font-bold mb-3 text-stone-900">
@@ -25,11 +25,12 @@ export default function Hero() {
       </section>
       </div>
       
-      <section className=" absolute end-10 bottom-20 text-stone-900 ">
+      <section className=" absolute end-10 bottom-10 text-stone-900 text-[1px]">
         <div>
           <h1>
           Full Stack Web Devolopment and UI Design
         </h1>
+        <h1>by Andrew Sayasing</h1>
         </div>        
 
       </section>

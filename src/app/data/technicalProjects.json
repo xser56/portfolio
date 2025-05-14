@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Tip Calculator",
+        "projectDescription": "Made a interactive tip calculator following the design from the Frontend Mentor website.",
+        "stack": "Vite | JavaScript",
+        "projectImg": "/assets/projects/tipCalculator.png",
+        "projectImgAlt": "Tip Calculator",
+        "projectVercel": "https://tipcalculator-orpin.vercel.app"
+    },
+     {
+        "title": "Task Tracker",
+        "projectDescription": "Made a simple task tracker app that allows the user to enter a task's name, description, due date, and a priority system with a dynamic to do list.",
+        "stack": "Vite | JavaScript",
+        "projectImg": "/assets/projects/tasktracker.png",
+        "projectImgAlt": "Task Tracker",
+        "projectVercel": "https://task-tracker-nu-two.vercel.app/?"
+    },
+     {
+        "title": "Sorting Data",
+        "projectDescription": "Made a simple data sorting table that can sort between ID, First and Last name, Height, and Age for up to 50 people.",
+        "stack": "HTML/CSS | JavaScript",
+        "projectImg": "/assets/projects/sortingData.png",
+        "projectImgAlt": "",
+        "projectVercel": "https://challenge2-sorting-data-xi.vercel.app"
+    }
+]
