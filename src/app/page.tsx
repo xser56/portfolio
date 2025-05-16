@@ -10,21 +10,22 @@ import staticProjectData from "./data/staticWebsites.json";
 import apiProjectsData from "./data/apiProjects.json"
 import technicalProjects from "./data/technicalProjects.json"
 
+
 export default function Home() {
   const staticProjectsArr: ProjectProps[] = staticProjectData as ProjectProps[];
   const apiProjectArr: ProjectProps[] = apiProjectsData as ProjectProps[];
   const technicalProjectsArr: ProjectProps[] = technicalProjects as ProjectProps[];
 
   return (
-    <div>
+    <div className="">
       
       <Navbar />
       <Hero />
 
-      <section>
+      <section id="about">
         <AboutComponent
           title={"About Me"}
-          image={"/assets/me.png"}
+          image={"/assets/me1.png"}
           imageAlt={"Andrew"}
           description={
             "Hello, my name is Andrew Sayasing. I am a Full Stack Junior Web Developer who studied and graduated from CodeStack Acedemy located in Stockton, California."
@@ -33,11 +34,11 @@ export default function Home() {
       </section>
 
       {/* Projects */}
-      <h1 className="text-3xl pb-10">Projects</h1>
       <section className="bg-gray-100">
+      <h1 className="text-3xl pb-10" id="projects">Projects</h1>
 
         {/* Static */}
-        <h1>Static Webpages</h1>
+        <h1 id="static">Static Webpages</h1>
         <div className="grid grid-cols-3">
           {staticProjectsArr.map((project, index) => (
             <Projects
@@ -53,7 +54,7 @@ export default function Home() {
         </div>
 
           {/* Api */}
-        <h1>API Applications</h1>          
+        <h1 id="api">API Applications</h1>          
         <div className="grid grid-cols-3">
           {apiProjectArr.map((project, index) => (
             <Projects
@@ -69,7 +70,7 @@ export default function Home() {
         </div>
 
           {/* Technical */}
-        <h1>Technical Applications</h1>
+        <h1 id="tech">Technical Applications</h1>
         <div className="grid grid-cols-3">
           {technicalProjectsArr.map((project, index) => (
             <Projects
@@ -90,10 +91,14 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-4">Contact</h2>
         <p className="text-lg mb-4">Feel free to reach out to me at:</p>
         <a href="mailto:your.email@example.com" className="">
+          <img src="/assets/mail.png" alt="email" className="w-7 h-7 inline "/>
           Email: sayasing00@gmail.com
         </a>
-        <a href="">Githib: xser56</a>
+        <a href="https://github.com/xser56"
+        target="_blank" 
+        rel="noopener noreferrer"> <img src="/assets/githublogo.png" alt="git logo" className="w-5 h-5 inline "/> Githib: xser56</a>
       </section>
+
     </div>
   );
 }

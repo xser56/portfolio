@@ -1,21 +1,51 @@
 "use client"
 
-import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
 
-  const router = useRouter();
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        setShowNavbar(false); 
+      } else {
+        setShowNavbar(true); 
+      }
+      setLastScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
   
   return (
-    <nav className="fixed top-0 w-full bg-white shadow z-50 text-black">
+    <nav className= {`fixed top-0 w-full bg-white shadow z-50 transition-transform duration-300 ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className=" mx-10 flex justify-between items-center py-4 px-6">
         <h1 className="font-bold text-1xl">A Web Devoloper's Portfolio</h1>
         {/* Drop down  */}
-        <div className="space-x-10 pe-20 text-[14px]">
-        <button onClick={() => router.push("about")}>About</button>
-          <button onClick={() => router.push("/projects")}>Projects</button>
-          <button onClick={() => router.push("contact")}>Contact</button>
-        </div>
+        <div>
+        <a href="#about" className="cursor-pointer hover:underline">About</a>
+        <div className="relative group inline-block ml-4">
+  <a href="#projects" className="cursor-pointer hover:underline">
+    Projects
+  </a>
+
+  {/* Dropdown Menu */}
+  <div className="absolute hidden group-hover:block bg-white shadow-md rounded-md ">
+    <a href="#static" className="block px-4 py-2 hover:bg-gray-100">Static Web</a>
+    <a href="#api" className="block px-4 py-2 hover:bg-gray-100">API</a>
+    <a href="#tech" className="block px-4 py-2 hover:bg-gray-100">Technical</a>
+  </div>
+</div>
+        <a href="#contact" className="cursor-pointer hover:underline ml-4">Contact</a>
+      </div>
+
       </div>
     </nav>
   );

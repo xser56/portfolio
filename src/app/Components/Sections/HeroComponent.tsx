@@ -4,7 +4,7 @@ export default function Hero() {
 
   return (
     
-    <main className="h-screen flex flex-col justify-center  bg-gray-100">
+    <main className="font-serif h-screen flex flex-col justify-center bg-gray-100">
       
       <AnimatedBackground/>
       <div className="absolute left-30">

@@ -3,7 +3,7 @@
         "title": "Weather App",
         "projectDescription": "A frontend weather tracker app that has the user input a city or location into a search bar and then returns the locations temperurature and 5 day forcast",
         "stack": "Next.js, Tailwind CSS",
-        "projectImg": "/assets/weatherTracker.png",
+        "projectImg": "/assets/projects/weatherTracker.png",
         "projectImgAlt": "Weather App",
         "projectVercel": "https://weather-tracker-rebuild-goip.vercel.app"
         
@@ -12,7 +12,7 @@
         "title": "My Own Pokedex",
         "projectDescription": "Users can search a pokemon from the Pokemon Api, gen 1-5 (1-645), and have their stats, location and evolution chain displayed in a pokedex like format.",
         "stack": "Next.js, Tailwind CSS",
-        "projectImg": "/assets/pokemonapp.png",
+        "projectImg": "/assets/projects/pokemonapp.png",
         "projectImgAlt": "Pokedex",
         "projectVercel": "https://pokemon-nextjs-rebuild.vercel.app"
     }
