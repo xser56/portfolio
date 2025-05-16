@@ -1,0 +1,10 @@
+[
+    {
+        "title": "Lets Ride",
+        "projectDescription": "Let's Ride is a Fullstack motorcylce Social Media App that allows users to connect and share routes and images between one another on a mobile level. With the use of Mapbox's Routing API, user's can record their own Routes and post them for one another to experience amongst themselves. Along with routing, users can post and share images allowing them to comment and express between one another",
+        "stack": "Next.Js + Typescript, Firebase, Mapbox | C#, .Net, JWT Token",
+        "projectImg": "/assets/projects/letsRide1.png",
+        "projectImgAlt": "Lets Ride",
+        "projectVercel": "https://lets-ride-fullstack.vercel.app/home"
+    }
+]

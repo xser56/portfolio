@@ -20,20 +20,13 @@ export default function Hero() {
           <ul>Next.Js</ul>
           <ul>TypeScript</ul>
           <ul>Framer Motion</ul>
+          <ul>Tailwind CSS</ul>
 
         </div>
       </section>
       </div>
       
-      <section className=" absolute end-10 bottom-10 text-stone-900 text-[1px]">
-        <div>
-          <h1>
-          Full Stack Web Devolopment and UI Design
-        </h1>
-        <h1>by Andrew Sayasing</h1>
-        </div>        
-
-      </section>
+     
 
 
         

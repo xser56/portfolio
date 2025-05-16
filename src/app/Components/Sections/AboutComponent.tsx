@@ -16,34 +16,61 @@ const AboutComponent = ({
   imageAlt,
 }: AboutProps) => {
   return (
-    <motion.section
-      initial={{ opacity: 10, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: false }}
-      className=""
-    >
-      <main className="flex flex-col-2 justify-around bg-stone-200/30">
-        <section className="pt-10">
+    <main className="flex flex-col-2 justify-around font-serif">
+      <section className="pt-10">
+        <div>
+          <h1 className="text-[40px]">{title}</h1>
+          <p className="text-[16px] max-w-2xl flex ">{description}</p>
+        </div>
+
+        <section className="flex flex-col-2 justify-between mt-10">
           <div>
-            <h1 className="text-[40px]">{title}</h1>
-            <p className="text-[16px] max-w-2xl flex ">{description}</p>
+            <h1 className="font-bold">Frontend Development:</h1>
+            <li>Next.js</li>
+            <li>React Native</li>
+            <li>Tailwind CSS</li>
+            <li>Vite/Vue</li>
+            <li>Bootstrap</li>
+            <li>Shad CN</li>
+            <li>Flowbite</li>
           </div>
 
-          <div></div>
+          <div>
+            <h1 className="font-bold">Backend Development:</h1>
+            <li>C#</li>
+            <li>EF Core .NET Entity Framework</li>
+            <li>Controller/Routing</li>
+            <li>JWT Token salt/hash</li>
+            <li>SQL Querey</li>
+          </div>
         </section>
+        <section className="flex flex-col-2 justify-between mt-10">
+          <div >
+            <h1 className="font-bold">Deployment and infostructer:</h1>
+            <li>Microsoft Azure Cloud Services</li>
+            <li>Vercel</li>
+            <li>Github</li>
+          </div>
 
-        <section className=" text-black bg-stone-100 flex justify-center items-center">
-          <Image
-            src={image}
-            alt={imageAlt}
-            width={600}
-            height={200}
-            className=""
-          />
+          <div className="">
+            <h1 className="font-bold">Tools:</h1>
+            <li>Figma</li>
+            <li>Postman</li>
+            <li>AI Prompting</li>
+          </div>
         </section>
-      </main>
-    </motion.section>
+      </section>
+
+      <section className=" text-black  flex justify-center items-center pt-10">
+        <Image
+          src={image}
+          alt={imageAlt}
+          width={600}
+          height={200}
+          className=""
+        />
+      </section>
+    </main>
   );
 };
 
