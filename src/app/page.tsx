@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import Hero from "./Components/Sections/HeroComponent";
 import Navbar from "./Components/Sections/NavbarComponent";
 import AboutComponent from "./Components/Sections/AboutComponent";
@@ -168,63 +169,71 @@ export default function Home() {
           <div className="">
             {/* Email */}
             <div className="flex items-center">
-              <img
-                src="/assets/mail.png"
-                alt="email"
-                className="w-6 h-6 relative right-[2px] me-1"
-              />
-              <a href="mailto:sayasing00@gmail.com">
-                Email:{" "}
-                <span className="hover:text-gray-400">
-                  sayasing<span className="font-serif">00</span>@gmail.com
-                </span>
-              </a>
-            </div>
+  <Image
+    src="/assets/mail.png"
+    alt="email"
+    width={24}
+    height={24}
+    className="w-6 h-6 relative right-[2px] me-1"
+  />
+  <a href="mailto:sayasing00@gmail.com">
+    Email:{" "}
+    <span className="hover:text-gray-400">
+      sayasing<span className="font-serif">00</span>@gmail.com
+    </span>
+  </a>
+</div>
 
-            {/* GitHub */}
-            <div className="flex items-center">
-              <img
-                src="/assets/githublogo.png"
-                alt="git logo"
-                className="w-5 h-5 me-2"
-              />
-              <a
-                href="https://github.com/xser56"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Github: <span className="hover:text-gray-400">xser56</span>
-              </a>
-            </div>
+{/* GitHub */}
+<div className="flex items-center">
+  <Image
+    src="/assets/githublogo.png"
+    alt="git logo"
+    width={20}
+    height={20}
+    className="w-5 h-5 me-2"
+  />
+  <a
+    href="https://github.com/xser56"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Github: <span className="hover:text-gray-400">xser56</span>
+  </a>
+</div>
 
-            {/* LinkedIn */}
-            <div className="flex items-center">
-              <img
-                src="/assets/linked.png"
-                alt="LinkedIn"
-                className="w-5 h-5 me-2"
-              />
-              <a
-                href="https://www.linkedin.com/in/andrew-sayasing-478999350/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Linkedin:{" "}
-                <span className="hover:text-gray-400">Andrew Sayasing</span>
-              </a>
-            </div>
+{/* LinkedIn */}
+<div className="flex items-center">
+  <Image
+    src="/assets/linked.png"
+    alt="LinkedIn"
+    width={20}
+    height={20}
+    className="w-5 h-5 me-2"
+  />
+  <a
+    href="https://www.linkedin.com/in/andrew-sayasing-478999350/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Linkedin:{" "}
+    <span className="hover:text-gray-400">Andrew Sayasing</span>
+  </a>
+</div>
 
-            {/* Phone */}
-            <div className="flex items-center">
-              <img
-                src="/assets/phone.png"
-                alt="phone"
-                className="w-5 h-5 me-2"
-              />
-              <p>
-                Phone: <span className="hover:text-gray-400">209-905-3403</span>
-              </p>
-            </div>
+{/* Phone */}
+<div className="flex items-center">
+  <Image
+    src="/assets/phone.png"
+    alt="phone"
+    width={20}
+    height={20}
+    className="w-5 h-5 me-2"
+  />
+  <p>
+    Phone: <span className="hover:text-gray-400">209-905-3403</span>
+  </p>
+</div>
           </div>
         </div>
       </section>

@@ -29,7 +29,7 @@ export default function Navbar() {
   return (
     <nav className= {`font-serif font-extralight  fixed top-0 w-full bg-white shadow z-50 transition-transform duration-300 ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className=" mx-10 flex justify-between items-center py-4 px-6">
-        <h1 className=" text-1xl">A Web Devoloper's Portfolio</h1>
+        <h1 className=" text-1xl">A Web Devoloper&apos;s Portfolio</h1>
         {/* Drop down  */}
         <div>
         <a href="#about" className="cursor-pointer hover:underline">About</a>

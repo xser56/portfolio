@@ -1,12 +1,18 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+interface Bubble {
+  size: number;
+  left: number;
+  duration: number;
+  delay: number;
+}
 
 const AnimatedBackground = () => {
-  const [bubbles, setBubbles] = useState<any[]>([]);
+  const [bubbles, setBubbles] = useState<Bubble[]>([]);
 
   useEffect(() => {
-    const generatedBubbles = Array.from({ length: 20 }).map(() => ({
+    const generatedBubbles: Bubble[] = Array.from({ length: 20 }).map(() => ({
       size: Math.random() * 20 + 10,
       left: Math.random() * 100,
       duration: Math.random() * 10 + 5,

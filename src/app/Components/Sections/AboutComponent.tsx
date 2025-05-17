@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";
 
@@ -27,9 +26,11 @@ const AboutComponent = ({
               rel="noopener noreferrer"
               className="relative group inline-block"
             >
-              <img
+              <Image
                 src="/assets/resume-7.svg"
                 alt="resume"
+                width={500}
+                height={300}
                 className="w-10 h-10 relative bottom-[4px] ms-2 inline"
               />
 
