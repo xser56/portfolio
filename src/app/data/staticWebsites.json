@@ -2,15 +2,15 @@
 [
     {
         "title": "Puppy Restaurant",
-        "projectDescription": "Took a mock up and made it into a fully functional static site using the bootstrap framework.",
-        "stack": "HTML/CSS",
+        "projectDescription": "Puppy Restaurant is fully designed mock resturant based static web page that includes multiple pages for menuing and information about the resturant's services. ",
+        "stack": "HTML/CSS | Bootstrap",
         "projectImg": "/assets/projects/puppyresturant.png",
-        "projectImgAlt": "Puppy Resturant",
+        "projectImgAlt": "Puppy Restaurant",
         "projectVercel": "https://puppy-restaurant-jet.vercel.app"
     },
     {
         "title": "Hamster Hotel",
-        "projectDescription": "Took a mock up cover page and made it into a static webpage using simple HTML and CSS with bootstrap",
+        "projectDescription": "Hamster Hotel is a mock up cover page and made it into a static webpage using simple HTML and CSS along with the Bootstrap library",
         "stack": "HTML/CSS | Bootstrap",
         "projectImg": "/assets/projects/hamsterHotel.png",
         "projectImgAlt": "Hamster Hotel",
@@ -18,8 +18,8 @@
     }, 
     {
         "title": "Cookware Website",
-        "projectDescription": "Made a interactive tip calculator following the design from the Frontend Mentor website.",
-        "stack": "HTML/CSS",
+        "projectDescription": "Cookware website is a single page mock website that includes multiple sections and images for cookware advertisement",
+        "stack": "HTML/CSS | Bootstrap",
         "projectImg": "/assets/projects/cookware.png",
         "projectImgAlt": "Cookware Website",
         "projectVercel": "https://cookware-website.vercel.app"

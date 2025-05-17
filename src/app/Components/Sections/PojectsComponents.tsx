@@ -25,7 +25,7 @@
     <div className="p-6 bg-white shadow-lg mt-4 ">
       <h3 className="text-2xl font-bold mb-2 text-center">{title}</h3>
       <p className="mb-2 text-gray-700">{projectDescription}</p>
-      <p className="text-sm text-gray-600">Stack: <br /> {stack}</p>
+<p dangerouslySetInnerHTML={{ __html: stack }} className="text-sm text-gray-600" />      
     </div>
   </div>
 </section>

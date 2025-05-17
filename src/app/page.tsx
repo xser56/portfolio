@@ -29,7 +29,6 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-b from- via-gray-50 to-gray-200">
       <Navbar />
       <Hero />
-
       <section id="about" className=" pb-10 mb-8  border-bottom shadow-2xl">
         <AboutComponent
           title={"About Me"}
@@ -39,13 +38,10 @@ export default function Home() {
             "Hello, my name is Andrew Sayasing. I am a Full Stack Junior Web Developer who studied and graduated from CodeStack Acedemy located in Stockton, California. Fresh to the scene, im looking to further develop my skills in a professional environment! My stack includes "
           }
         />
-
-        
       </section>
-
       {/* Projects */}
-     <section className="mx-2">
-      <h1 className="text-3xl  pt-5 mb-8 flex justify-center" id="fullstack">Projects</h1>
+     <section className="mx-2 font-serif">
+      <h1 className="text-3xl font-light pt-5 ps-5 mb-8 " id="fullstack">Projects</h1>
 
       {/* Full Stack */}
       <div className="">
@@ -119,18 +115,22 @@ export default function Home() {
       {/* Contact  */}
       <section
         id="contact"
-        className="py-5 mx-auto px-6 bg-gray-200 mt-10 font-serif"
+        className="py-5 px-30 bg-gray-200 mt-10 font-serif"
       >
-        <h2 className="text-2xl font-semibold mb-4">Contact</h2>
-        <p className="text-md mb-4">Feel free to reach out to me at:</p>
-        <div className="flex items-center place-content-start">
+        <div className="flex justify-center">
+          <h2 className="text-3xl font-light ">Contact</h2>
+        </div>
+        <p className="text-[16px] font-semi mb-6 flex justify-center">Feel free to reach out at</p>
+        
+        <div className="grid grid-cols-2 ">
+      <div className="flex items-center place-content-start">
             <img
               src="/assets/mail.png"
               alt="email"
-              className="w-5 h-5 me-1 inline "
+              className="w-6 h-6 me-1 inline "
             />
           <a href="mailto:sayasing00@gmail.com" className="">
-            Email: <span className="hover:text-blue-600">sayasing<span className="font-serif">00</span>@gmail.com </span> 
+            Email: <span className="hover:text-gray-400">sayasing<span className="font-serif">00</span>@gmail.com </span> 
           </a>
         </div>
         <div className="flex items-center ">
@@ -145,21 +145,34 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Github: <span className="hover:text-amber-700">xser56 </span> 
+            Github: <span className="hover:text-gray-400">xser56 </span> 
           </a>
         </div>
         <div className="flex items-center place-content-start">
             <img
               src="/assets/linked.png"
-              alt="email"
+              alt="Linkin"
               className="w-5 h-5 me-1 inline "
             />
           <a href="https://www.linkedin.com/in/andrew-sayasing-478999350/" className=""
           target="_blank"
             rel="noopener noreferrer">
-            Linkedin: <span className="hover:text-blue-600">Andrew Sayasing</span> 
+            Linkedin: <span className="hover:text-gray-400">Andrew Sayasing</span> 
           </a>
         </div>
+        <div className="flex items-center place-content-start">
+            <img
+              src="/assets/phone.png"
+              alt="phone"
+              className="w-5 h-5 me-1 inline "
+            />
+            <h1>
+            Phone: <span className="hover:text-gray-400">209-905-3403</span> 
+
+            </h1>
+        </div>
+        </div>
+        
       </section>
     </div>
   );

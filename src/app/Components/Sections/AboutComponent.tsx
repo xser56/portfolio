@@ -19,32 +19,34 @@ const AboutComponent = ({
     <main className="flex flex-col-2 justify-around font-serif">
       <section className="pt-10">
         <div>
-          <h1 className="text-[40px]">{title}</h1>
+          <h1 className="text-[40px]">{title} 
+            <a href="https://docs.google.com/document/d/e/2PACX-1vRuQn2oMQ1vkM8qDeCUhkgJJq1_yBz47Rp-E-2HwihfH8wb9ijolcuu2gCpPZuPLkJBZyszjNCfHM26/pub">
+        <img src="/assets/resume-7.svg" alt="resume" className="w-10 h-10 relative bottom-[4px] ms-2 inline"/></a>
+        </h1>
           <p className="text-[16px] max-w-2xl flex ">{description}</p>
         </div>
 
-        <section className="flex flex-col-2 justify-between mt-10">
+        <section className="grid grid-cols-2 gap-50 mt-10">
           <div>
             <h1 className="font-bold">Frontend Development:</h1>
             <li>Next.js</li>
             <li>React Native</li>
             <li>Tailwind CSS</li>
-            <li>Vite/Vue</li>
-            <li>Bootstrap</li>
-            <li>Shad CN</li>
-            <li>Flowbite</li>
+            <li>Fully Responsive design</li>
+            <li>Vite / Vue</li>
+            <li>Bootstrap / ShadCN / FlowBite</li>
           </div>
 
           <div>
             <h1 className="font-bold">Backend Development:</h1>
             <li>C#</li>
             <li>EF Core .NET Entity Framework</li>
-            <li>Controller/Routing</li>
+            <li>Controller / Routing</li>
             <li>JWT Token salt/hash</li>
-            <li>SQL Querey</li>
+            <li>SQL Data Management</li>
           </div>
         </section>
-        <section className="flex flex-col-2 justify-between mt-10">
+        <section className="grid grid-cols-2 gap-50 mt-10">
           <div >
             <h1 className="font-bold">Deployment and infostructer:</h1>
             <li>Microsoft Azure Cloud Services</li>
@@ -66,7 +68,7 @@ const AboutComponent = ({
           src={image}
           alt={imageAlt}
           width={600}
-          height={200}
+          height={300}
           className=""
         />
       </section>
